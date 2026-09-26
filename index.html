@@ -10,7 +10,7 @@
     <main class="shell">
       <header class="topbar">
         <div>
-          <p class="eyebrow">聚会前快速复习</p>
+          <p class="eyebrow">聚会前快速复习 · 开局讲解单</p>
           <h1>桌游规则遗忘点卡片库</h1>
         </div>
         <div class="summary">
@@ -25,6 +25,10 @@
           <div>
             <span>最久未玩</span>
             <strong id="staleGame">-</strong>
+          </div>
+          <div>
+            <span>今晚到场</span>
+            <strong id="tonightCount">0</strong>
           </div>
         </div>
       </header>
@@ -105,6 +109,15 @@
             </label>
             <button class="primary" type="submit">加入收藏</button>
           </form>
+
+          <section class="friends-block">
+            <h2>常来的朋友</h2>
+            <form id="friendForm" class="friend-form">
+              <input id="friendNameInput" required placeholder="朋友昵称" />
+              <button class="primary" type="submit">添加</button>
+            </form>
+            <ul id="friendList" class="friend-list"></ul>
+          </section>
         </aside>
 
         <section class="panel list-panel">

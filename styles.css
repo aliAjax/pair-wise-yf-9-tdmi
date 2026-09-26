@@ -124,7 +124,7 @@ h3 {
 
 .summary {
   display: grid;
-  grid-template-columns: repeat(3, minmax(108px, 1fr));
+  grid-template-columns: repeat(4, minmax(100px, 1fr));
   gap: 10px;
 }
 
@@ -367,6 +367,180 @@ label {
 
 .detail-actions button {
   flex: 1;
+}
+
+input[type="checkbox"] {
+  width: auto;
+}
+
+.friends-block {
+  margin-top: 16px;
+  border-top: 1px solid var(--line);
+  padding-top: 14px;
+}
+
+.friend-form {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.friend-list {
+  display: grid;
+  gap: 6px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.friend-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: #fff;
+  padding: 7px 9px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.friend-list button {
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  flex: 0 0 auto;
+}
+
+.rec,
+.hint {
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.hint {
+  margin: 0 0 8px;
+}
+
+.roster-list {
+  display: grid;
+  gap: 7px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.roster-list li {
+  display: grid;
+  grid-template-columns: 1fr 104px;
+  gap: 8px;
+  align-items: center;
+}
+
+.roster-list select {
+  padding: 6px 8px;
+  font-size: 13px;
+}
+
+.attend {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: var(--ink);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.teach-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.teach-head h3 {
+  margin-bottom: 0;
+}
+
+.progress {
+  height: 8px;
+  border-radius: 999px;
+  background: #e6e9ec;
+  overflow: hidden;
+  margin-bottom: 8px;
+}
+
+.progress div {
+  height: 100%;
+  background: var(--green);
+  transition: width 0.2s ease;
+}
+
+.teach-group h4 {
+  margin: 10px 0 6px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.teach-list {
+  display: grid;
+  gap: 6px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.teach-list label {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  color: var(--ink);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.45;
+}
+
+.teach-list input {
+  margin-top: 3px;
+}
+
+.teach-list li.done span {
+  color: var(--muted);
+  text-decoration: line-through;
+}
+
+.teach-sheet > button {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.level-badge {
+  flex: 0 0 auto;
+  align-self: flex-start;
+  border-radius: 999px;
+  padding: 2px 7px;
+  font-size: 11px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.level-badge.lv0 {
+  background: rgba(49, 95, 134, 0.12);
+  color: var(--blue);
+}
+
+.level-badge.lv1 {
+  background: rgba(213, 162, 61, 0.2);
+  color: #8a6414;
+}
+
+.level-badge.lv2 {
+  background: rgba(179, 72, 72, 0.12);
+  color: var(--red);
 }
 
 @media (max-width: 1160px) {
