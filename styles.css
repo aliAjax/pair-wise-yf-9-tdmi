@@ -173,9 +173,256 @@ label {
 
 .layout {
   display: grid;
-  grid-template-columns: 300px minmax(420px, 1fr) 360px;
+  grid-template-columns: 300px minmax(420px, 1fr) 380px;
   gap: 16px;
   align-items: start;
+}
+
+/* 今晚名单 */
+.roster-panel {
+  margin-bottom: 16px;
+}
+
+.roster-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.roster-actions span {
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.roster-actions button {
+  padding: 6px 10px;
+  font-size: 12px;
+}
+
+.roster-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.roster-chip {
+  display: inline-flex;
+  align-items: stretch;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: #fff;
+  overflow: hidden;
+}
+
+.roster-chip.present {
+  border-color: var(--green);
+}
+
+.chip-toggle {
+  border: 0;
+  border-radius: 999px 0 0 999px;
+  background: transparent;
+  padding: 7px 12px;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.roster-chip.present .chip-toggle {
+  background: var(--green);
+  color: #fff;
+}
+
+.chip-delete {
+  border: 0;
+  border-radius: 0 999px 999px 0;
+  background: transparent;
+  padding: 7px 10px;
+  color: var(--muted);
+  font-weight: 900;
+}
+
+.roster-chip.present .chip-delete {
+  background: var(--green);
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.chip-delete:hover {
+  color: var(--red);
+}
+
+.friend-add {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.roster-hint {
+  margin-bottom: 0;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+/* 讲解单 */
+.teach-card {
+  border: 1px solid var(--green);
+  border-radius: 8px;
+  background: rgba(57, 116, 91, 0.06);
+  padding: 12px;
+}
+
+.teach-empty {
+  border-color: var(--line);
+  background: #fff;
+}
+
+.teach-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.teach-head h3 {
+  margin-bottom: 0;
+}
+
+.ghost-btn {
+  padding: 5px 10px;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.teach-scope {
+  margin: 8px 0 10px;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.teach-scope strong {
+  color: var(--green);
+}
+
+.progress {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.progress-bar {
+  flex: 1;
+  height: 8px;
+  border-radius: 999px;
+  background: #e2e7e4;
+  overflow: hidden;
+}
+
+.progress-bar span {
+  display: block;
+  height: 100%;
+  border-radius: 999px;
+  background: var(--green);
+  transition: width 0.2s ease;
+}
+
+.progress-text {
+  color: var(--green);
+  font-size: 12px;
+  font-weight: 900;
+  white-space: nowrap;
+}
+
+.teach-section {
+  margin-bottom: 10px;
+}
+
+.teach-section:last-child {
+  margin-bottom: 0;
+}
+
+.teach-section h4 {
+  margin: 0 0 6px;
+  font-size: 13px;
+  color: var(--green);
+}
+
+.teach-item {
+  align-items: center;
+}
+
+.teach-check {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  grid-template-columns: none;
+  color: var(--ink);
+  font-size: 13px;
+  font-weight: 400;
+  cursor: pointer;
+  flex: 1;
+}
+
+.teach-check input {
+  width: auto;
+  margin-top: 3px;
+  accent-color: var(--green);
+}
+
+.teach-check input:checked + span {
+  color: var(--muted);
+  text-decoration: line-through;
+}
+
+.reopen-badge {
+  flex: 0 0 auto;
+  border-radius: 999px;
+  background: rgba(179, 72, 72, 0.12);
+  color: var(--red);
+  padding: 3px 8px;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 900;
+  white-space: nowrap;
+}
+
+/* 熟练度编辑 */
+.proficiency-card {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+  padding: 10px;
+}
+
+.prof-grid {
+  display: grid;
+  gap: 8px;
+}
+
+.prof-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 110px;
+  align-items: center;
+  gap: 8px;
+}
+
+.prof-name {
+  font-size: 13px;
+  font-weight: 700;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.prof-row select {
+  padding: 6px 8px;
+  font-size: 13px;
 }
 
 .panel {

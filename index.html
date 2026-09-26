@@ -63,6 +63,25 @@
         </label>
       </section>
 
+      <section class="panel roster-panel">
+        <div class="panel-head">
+          <h2>今晚名单</h2>
+          <div class="roster-actions">
+            <span id="rosterCount"></span>
+            <button id="clearRosterBtn" type="button">清空名单</button>
+          </div>
+        </div>
+        <div id="rosterChips" class="roster-chips"></div>
+        <form id="friendForm" class="friend-add">
+          <input id="friendNameInput" placeholder="输入常来朋友的名字，回车添加（到场时自动加入名单）" required />
+          <button class="primary" type="submit">添加朋友</button>
+        </form>
+        <p class="roster-hint">
+          点亮=到场，再点一次=离场；迟到的朋友到场时再点亮，受影响的已讲项会自动重开。
+          没玩过=四类全讲 · 玩过=跳过开局准备 · 熟悉=无需讲解。
+        </p>
+      </section>
+
       <section class="layout">
         <aside class="panel">
           <h2>新增桌游</h2>
